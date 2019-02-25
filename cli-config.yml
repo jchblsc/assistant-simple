@@ -42,7 +42,7 @@ test-cmd : "npm run test"
 build-cmd-debug : "npm install"
 
 # The command to run the code in the run container
-run-cmd : ""
+run-cmd : "npm start"
 # The command to execute debug of the code in the tools container
 debug-cmd : "npm run debug"
 # The command to stop the code
@@ -50,6 +50,8 @@ stop-cmd : "npm stop"
 
 # The relative path to the helm chart used for Kubernetes deployment
 chart-path : "chart/assistantsimple"
+
+deply-target: "container"
 
 # The IBM version of this configuration
 version : "0.0.3"
