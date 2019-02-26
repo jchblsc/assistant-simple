@@ -3,8 +3,8 @@
 replicaCount: 1
 revisionHistoryLimit: 1
 image:
-  repository: registry.not-used.net/replace-me-namespace/assistantsimple
-  tag: v1.0.0
+  repository: jchdckr/assistantsimple-express-tools
+  tag: latest
   pullPolicy: Always
   resources:
     requests:
