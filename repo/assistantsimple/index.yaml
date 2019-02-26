@@ -2,11 +2,11 @@ apiVersion: v1
 entries:
   assistantsimple:
   - apiVersion: v1
-    created: 2019-02-25T15:00:12.3042475-07:00
+    created: 2019-02-26T13:34:06.2774178-07:00
     description: A Helm chart for Kubernetes
-    digest: f93421b6b3163d7b91ae9dd8b9bc854c2c72b438c17da73201d84a15f07827ac
+    digest: 227b17f1a23479ded0951f50794bcfa2c2023ab59b9cabbdd21b67aeb4a50673
     name: assistantsimple
     urls:
-    - https://github.com/jchblsc/assistant-simple/repo/assistantsimple/assistantsimple-1.0.0.tgz
+    - assistantsimple-1.0.0.tgz
     version: 1.0.0
-generated: 2019-02-25T15:00:12.3032508-07:00
+generated: 2019-02-26T13:34:06.276415-07:00
