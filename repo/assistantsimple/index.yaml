@@ -17,6 +17,6 @@ entries:
     sources:
     - https://github.com/jchblsc/assistant-simple
     urls:
-    - assistantsimple-0.0.1.tgz
+    - https://github.com/jchblsc/assistant-simple/repo/assistantsimple/assistantsimple-0.0.1.tgz
     version: 0.0.1
 generated: 2019-02-26T17:54:40.8534202-07:00
