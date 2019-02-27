@@ -2,11 +2,21 @@ apiVersion: v1
 entries:
   assistantsimple:
   - apiVersion: v1
-    created: 2019-02-26T13:34:06.2774178-07:00
-    description: A Helm chart for Kubernetes
-    digest: 227b17f1a23479ded0951f50794bcfa2c2023ab59b9cabbdd21b67aeb4a50673
+    appVersion: "1.0"
+    created: 2019-02-26T17:54:40.8534202-07:00
+    description: Watson Assistant Simple
+    digest: ae9c90925889aca775227f22103410c6de18486bcf6363073dd593e57e564b9d
+    icon: https://www.ibm.com/watson/assets/duo/img/common/avatar_purple.png
+    keywords:
+    - Watson
+    - Assistant
+    maintainers:
+    - email: harrisjc@us.ibm.com
+      name: Jeff Harris
     name: assistantsimple
+    sources:
+    - https://github.com/jchblsc/assistant-simple
     urls:
-    - assistantsimple-1.0.0.tgz
-    version: 1.0.0
-generated: 2019-02-26T13:34:06.276415-07:00
+    - assistantsimple-0.0.1.tgz
+    version: 0.0.1
+generated: 2019-02-26T17:54:40.8534202-07:00

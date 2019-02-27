@@ -1,44 +1,37 @@
 apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
-  name: "{{  .Chart.Name }}-deployment"
+  name: {{ .Release.Name }}-{{ .Chart.Name }}
   labels:
-    chart: '{{ .Chart.Name }}-{{ .Chart.Version | replace "+" "_" }}'
+    app: assistantsimple
+    chart: {{ .Chart.Name }}-{{ .Chart.Version | replace "+" "_" }}
+    release: {{ .Release.Name | quote }}
+
+
 spec:
-  replicas: {{ .Values.replicaCount }}
-  strategy:
-    type: RollingUpdate
-    rollingUpdate:
-      maxUnavailable: 0
-      maxSurge: 1
-  revisionHistoryLimit: {{ .Values.revisionHistoryLimit }}
+  replicas: {{ .Values.replicas }}
   template:
     metadata:
       labels:
-        app: "{{  .Chart.Name }}-selector"
-        version: "current"
+         app: assistantsimple
+         chart: {{ .Chart.Name }}-{{ .Chart.Version | replace "+" "_" }}
+         release: {{ .Release.Name | quote }}
+
+
     spec:
       containers:
-      - name: "{{  .Chart.Name  }}"
-        image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
-        imagePullPolicy: {{ .Values.image.pullPolicy }}
-        livenessProbe:
-          httpGet:
-            path: /health
-            port: {{ .Values.service.servicePort }}
-          initialDelaySeconds: {{ .Values.livenessProbe.initialDelaySeconds}}
-          periodSeconds: {{ .Values.livenessProbe.periodSeconds}}
+      - name: {{ .Release.Name }}-web
+        image: "jchdckr/assistantsimple-express-tools:latest"
+        imagePullPolicy: Always
         ports:
-        - containerPort: {{ .Values.service.servicePort}}
-        resources:
-          requests:
-            cpu: "{{ .Values.image.resources.requests.cpu }}"
-            memory: "{{ .Values.image.resources.requests.memory }}"
+        - name: http
+          containerPort: 3000
         env:
-          - name: PORT
-            value : "{{ .Values.service.servicePort }}"
-          - name: APPLICATION_NAME
-            value: "{{ .Release.Name }}"
-{{- if .Values.generatedBindings.enabled }}
-{{.Files.Get "bindings.yaml" | indent 10 }}
-{{- end }}
+        - name: DEBUG_MODE
+          value: "{{ .Values.debugMode }}"
+        - name: ASSISTANT_IAM_APIKEY
+          value: {{ .Values.watsonskill.assistantIamApiKey }}
+        - name: WORKSPACE_ID
+          value: {{ .Values.watsonskill.workspaceId }}
+        - name: ASSISTANT_URL
+          value: "{{ .Values.watsonskill.assistantUrl }}"
