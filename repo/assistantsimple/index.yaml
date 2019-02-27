@@ -3,9 +3,9 @@ entries:
   assistantsimple:
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2019-02-26T23:07:56.7318049-07:00
+    created: 2019-02-27T00:17:31.1409939-07:00
     description: Watson Assistant Simple
-    digest: 4b5dd834fb214118a14c3bf59022e513c6a5a5cbe17b193ae973353e55d626bc
+    digest: c7cd9e54d9c36ae01524f8c2966f06f2c8ecef9f94b6e965da804d853ef61eb9
     icon: https://www.ibm.com/watson/assets/duo/img/common/avatar_purple.png
     keywords:
     - Watson
@@ -17,6 +17,6 @@ entries:
     sources:
     - https://github.com/jchblsc/assistant-simple
     urls:
-    - https://raw.githubusercontent.com/jchblsc/assistant-simple/master/repo/assistantsimple/assistantsimple-0.0.4.tgz
-    version: 0.0.4
-generated: 2019-02-26T23:07:56.7308093-07:00
+    - https://raw.githubusercontent.com/jchblsc/assistant-simple/master/repo/assistantsimple/assistantsimple-0.0.5.tgz
+    version: 0.0.5
+generated: 2019-02-27T00:17:31.1399946-07:00
