@@ -5,4 +5,4 @@ debugMode: "true"
 watsonskill:
   assistantIamApiKey:
   workspaceId:
-assistantUrl: "https://gateway.watsonplatform.net/assistant/api"
+  assistantUrl: "https://gateway.watsonplatform.net/assistant/api"
